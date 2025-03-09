@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tujude Jälgija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tujude Jälgija</h1>
+        <label>Vali aasta: <input type="number" id="year" value="2025" min="2000" max="2100"></label>
+
+        <!-- Kuupäevade numberd üleval -->
+        <div id="calendar-header"></div>
+
+        <!-- Kalendri ruudustik -->
+        <div id="calendar-container"></div>
+
+        <!-- Tujude valik -->
+        <div id="mood-section">
+            <h2>Vali tujud ja protsendid:</h2>
+            <div id="mood-buttons"></div>
+            <button class="primary-btn" id="add-mood">+ Lisa uus tuju</button>
+            <button class="primary-btn" id="save-btn">💾 Salvesta</button>
+        </div>
+    </div>
+
+    <!-- Popup tuju lisamiseks -->
+    <div id="newMoodPopup" class="popup hidden">
+        <div class="popup-content">
+            <h3>Lisa uus tuju</h3>
+            <input type="text" id="newMoodInput" placeholder="Tujunimi">
+            <input type="color" id="newMoodColor">
+            <button id="confirm-add-mood" class="primary-btn">✅ Lisa</button>
+            <button id="cancel-add-mood" class="primary-btn">❌ Tühista</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
